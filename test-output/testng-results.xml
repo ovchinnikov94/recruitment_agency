@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="2811" started-at="2015-05-11T16:14:34Z" finished-at="2015-05-11T16:14:37Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="2811" started-at="2015-05-11T16:14:34Z" finished-at="2015-05-11T16:14:37Z">
+      <class name="com.ragency.tests.SkillDaoTest">
+        <test-method status="PASS" signature="skillDaoTest()[pri:0, instance:com.ragency.tests.SkillDaoTest@18067a5]" name="skillDaoTest" duration-ms="2796" started-at="2015-05-11T19:14:34Z" finished-at="2015-05-11T19:14:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- skillDaoTest -->
+      </class> <!-- com.ragency.tests.SkillDaoTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

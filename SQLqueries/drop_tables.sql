@@ -1,0 +1,14 @@
+DROP TABLE IF EXISTS `ragency`.`history` ;
+DROP TABLE IF EXISTS `ragency`.`people_has_lang` ;
+DROP TABLE IF EXISTS `ragency`.`vacancy_has_lang` ;
+DROP TABLE IF EXISTS `ragency`.`vacancy_has_skill` ;
+DROP TABLE IF EXISTS `ragency`.`people_has_skill` ;
+DROP TABLE IF EXISTS `ragency`.`vacancy` ;
+DROP TABLE IF EXISTS `ragency`.`people` ;
+DROP TABLE IF EXISTS `ragency`.`educationtype` ;
+DROP TABLE IF EXISTS `ragency`.`company` ;
+DROP TABLE IF EXISTS `ragency`.`skill` ;
+DROP TABLE IF EXISTS `ragency`.`lang` ;
+DROP TABLE IF EXISTS `ragency`.`sphere` ;
+DROP TABLE IF EXISTS `ragency`.`post` ;
+DROP TABLE IF EXISTS `ragency`.`specialization` ;

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests">
+  <test name="DaoTests">
+  	<classes>
+  		<class name="tests.CompanyDaoTest" />
+  		<class name="tests.EducationDaoTest" />
+  		<class name="tests.EduTypeDaoTest" />
+  		<class name="tests.HistoryDaoTest" />
+  		<class name="tests.LangDaoTest"/>
+  		<class name="tests.PeopleDaoTest"/>
+  		<class name="tests.PostDaoTest"/>
+  		<class name="tests.SkillDaoTest"/>
+  		<class name="tests.SpecDaoTest"/>
+  		<class name="tests.SpecDaoTest"/>
+  		<class name="tests.SphereDaoTest"/>
+  		<class name="tests.VacancyDaoTest"/>
+  	</classes>
+  </test> 
+</suite>

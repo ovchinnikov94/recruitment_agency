@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="buildDB" default="all">
+
+	<target name="dropTables">
+		<echo message="Drop tables!"/>
+		<sql driver="com.mysql.jdbc.Driver" 
+				url="jdbc:mysql://localhost:3306/ragency" 
+				userid="root" password="root1" onerror="continue">
+			<classpath>
+				<fileset dir="../">
+					<include name="mysql-connector-java-5.1.34-bin.jar" />
+				</fileset>
+			</classpath>
+			<transaction src="drop_tables.sql" />
+		</sql>
+	</target>
+	
+	<target name="createTables">
+		<echo message="Create tables!"/>
+		<sql driver="com.mysql.jdbc.Driver" 
+			url="jdbc:mysql://localhost:3306/ragency" 
+			userid="root" password="root1" onerror="continue">
+			<classpath>
+				<fileset dir="../">
+					<include name="mysql-connector-java-5.1.34-bin.jar" />
+				</fileset>
+			</classpath>
+			<transaction src="create_tables.sql" />
+		</sql>
+	</target>
+	
+	<target name="fillTables">
+		<echo message="Fill tables!"/>
+		<sql driver="com.mysql.jdbc.Driver" 
+			url="jdbc:mysql://localhost:3306/ragency" 
+			userid="root" password="root1" onerror="continue">
+			<classpath>
+				<fileset dir="../">
+					<include name="mysql-connector-java-5.1.34-bin.jar" />
+				</fileset>
+			</classpath>
+			<transaction src="fill_tables.sql" />
+		</sql>
+	</target>
+
+	<target name="all" depends="dropTables, createTables" />
+
+</project>

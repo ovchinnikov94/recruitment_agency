@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+  <definition name="common" template="/WEB-INF/layout/classic.jsp">
+    <put-attribute name="footer" value="/WEB-INF/layout/footer.jsp" />
+  </definition>
+  <definition name="search" extends="common">
+  	 <put-attribute name="body" value="/WEB-INF/view/search.jsp" />
+  </definition>
+  <definition name="listPeople" extends="common">
+  	 <put-attribute name="body" value="/WEB-INF/view/listPeople.jsp" />
+  </definition>
+  <definition name="listVacancies" extends="common">
+  	 <put-attribute name="body" value="/WEB-INF/view/listVacancies.jsp" />
+  </definition>
+  <definition name="listCompany" extends="common">
+  	 <put-attribute name="body" value="/WEB-INF/view/listCompany.jsp" />
+  </definition>
+  <definition name="detailPeople" extends="common">
+  	 <put-attribute name="body" value="/WEB-INF/view/detailPeople.jsp" />
+  </definition>
+  <definition name="detailVacancy" extends="common">
+  	 <put-attribute name="body" value="/WEB-INF/view/detailVacancy.jsp" />
+  </definition>
+  <definition name="editPeople" extends="common">
+  	 <put-attribute name="body" value="/WEB-INF/view/editPeople.jsp" />
+  </definition>
+  <definition name="editVacancy" extends="common">
+  	 <put-attribute name="body" value="/WEB-INF/view/editVacancy.jsp" />
+  </definition>
+  <definition name="editOther" extends="common">
+  	 <put-attribute name="body" value="/WEB-INF/view/editOther.jsp" />
+  </definition>
+  <definition name="errorPage" extends="common">
+  	 <put-attribute name="body" value="/WEB-INF/view/errorPage.jsp" />
+  </definition>
+</tiles-definitions>
