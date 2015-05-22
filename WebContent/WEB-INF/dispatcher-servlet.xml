@@ -7,19 +7,17 @@
 	xmlns:lang="http://www.springframework.org/schema/lang"
 	xmlns:p="http://www.springframework.org/schema/p"
 	xmlns:tx="http://www.springframework.org/schema/tx"
-	xmlns:util="http://www.springframework.org/schema/util"
 	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:util="http://www.springframework.org/schema/util"
 	xsi:schemaLocation="http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
-		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
 		http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang.xsd
 		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
-
-	<mvc:resources location="/resources/" mapping="/resources/**"/>
-	<mvc:annotation-driven />
+		
 	<context:component-scan base-package="com.ragency.controller" />
 	<context:annotation-config />
 	<!-- 
@@ -71,6 +69,7 @@
 	<bean id="langDao" class="com.ragency.dao.LangDaoImpl"></bean>
 	<bean id="skillDao" class="com.ragency.dao.SkillDaoImpl"></bean>
 	<bean id="companyDao" class="com.ragency.dao.CompanyDaoImpl"></bean>
+	<bean id="historyDao" class="com.ragency.dao.HistoryDaoImpl"></bean>
 
 	<bean id="vacancyManager" class="com.ragency.service.VacancyManagerImpl"></bean>
 	<bean id="peopleManager" class="com.ragency.service.PeopleManagerImpl"></bean>
@@ -80,7 +79,8 @@
 	<bean id="specManager" class="com.ragency.service.SpecManagerImpl"></bean>
 	<bean id="langManager" class="com.ragency.service.LangManagerImpl"></bean>
 	<bean id="skillManager" class="com.ragency.service.SkillManagerImpl"></bean>
-	<bean id="companyManager" class="com.ragency.service.CompanyManagerImpl"></bean>	
+	<bean id="companyManager" class="com.ragency.service.CompanyManagerImpl"></bean>
+	<bean id="historyManager" class="com.ragency.service.HistoryManagerImpl"></bean>		
 	
 	<!-- <tx:annotation-driven transaction-manager="transactionManager"/> <bean 
 		id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager"> 

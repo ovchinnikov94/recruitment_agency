@@ -39,7 +39,7 @@
 		</tr>
 	</table>
 </c:if>
-
+<c:if test="${empty peopleList}"><br><br><p><spring:message code="label.empty_list"/></p></c:if>
 <c:if test="${!empty peopleList}">
 <table class="table table-striped">
 <thead>

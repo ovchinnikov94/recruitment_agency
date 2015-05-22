@@ -84,9 +84,7 @@ public class HistoryDaoTest {
 	  
 	  int id = hist.getIdhistory();
 	  Assert.assertTrue(id == hDao.getHistoryById(id).getIdhistory()); 								// TEST addHistory()
-	  Assert.assertTrue(id == hDao.getHistoryByCompany(company).get(0).getIdhistory()); 			// TEST  getHistoryByCompany()
-	  Assert.assertTrue(id == hDao.getHistoryByPeople(people).get(0).getIdhistory()); 				// TEST getHistoryByPeople()
-	  
+
 	  
 	  
 	  for (History h : hDao.getAllHistory()) hDao.deleteHistory(h);									// REMOVE GARBAGE IN DB

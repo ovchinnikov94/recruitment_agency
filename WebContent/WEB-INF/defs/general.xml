@@ -36,4 +36,7 @@
   <definition name="errorPage" extends="common">
   	 <put-attribute name="body" value="/WEB-INF/view/errorPage.jsp" />
   </definition>
+  <definition name="listHistory" extends="common">
+  	 <put-attribute name="body" value="/WEB-INF/view/listHistory.jsp" />
+  </definition>
 </tiles-definitions>

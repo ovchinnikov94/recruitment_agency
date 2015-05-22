@@ -29,15 +29,15 @@ public class History {
 	@Column(name = "dateTo")
 	private Date dateTo;
 	
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "idpost", nullable = false)
 	private Post post;
 	
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "idcompany", nullable = false)
 	private Company company;
 	
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "idpeople", nullable = false)
 	private People people;
 

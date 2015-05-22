@@ -1,17 +1,15 @@
 package com.ragency.dao;
 
-import java.util.Collection;
+import java.util.List;
 
-import com.ragency.entity.Company;
 import com.ragency.entity.History;
-import com.ragency.entity.People;
 
 public interface HistoryDao {
 	public void addHistory(History history);
 	public void updateHistory(History history);
 	public void deleteHistory(History history);
 	public History getHistoryById(int id);
-	public Collection<History> getAllHistory();
-	public Collection<History> getHistoryByPeople(People people);
-	public Collection<History> getHistoryByCompany(Company company);
+	public List<History> getAllHistory();
+	public List<History> getHistoryByPeople(int idpeople);
+	public List<History> getHistoryByCompany(int idcompany);
 }

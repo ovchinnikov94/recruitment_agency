@@ -15,6 +15,8 @@
 <link rel="stylesheet"
 	href="resources/css/bootstrap.min.css">
 <link rel="stylesheet"
+	href="resources/css/bootstrap-datetimepicker.css">
+<link rel="stylesheet"
 	href="resources/css/bootstrap-theme.min.css">
 <script type="text/javascript"
 	src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
@@ -39,15 +41,20 @@
 				</div>
 				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">
-						<li class="active"><a href="search.do"><spring:message
+						<li <c:if test="${page_name.compareTo(\"search_page\") == 0}">class="active"</c:if> >
+							<a href="search.do"><spring:message
 									code="label.search"/></a></li>
-						<li><a href="vacancies.do"><spring:message
+						<li <c:if test="${page_name.compareTo(\"vacancy_list\") == 0}">class="active"</c:if> >
+							<a href="vacancies.do"><spring:message
 									code="label.vacancies" /></a></li>
-						<li><a href="people.do"><spring:message
+						<li <c:if test="${page_name.compareTo(\"people_list\") == 0}">class="active"</c:if> >
+							<a href="people.do"><spring:message
 									code="label.people"/></a></li>
-						<li><a href="companies.do"><spring:message
+						<li <c:if test="${page_name.compareTo(\"company_list\") == 0}">class="active"</c:if> >
+							<a href="companies.do"><spring:message
 									code="label.companies"/></a></li>
-						<li><a href="other.do"><spring:message
+						<li <c:if test="${page_name.compareTo(\"edit_other_page\") == 0}">class="active"</c:if> >
+							<a href="other.do"><spring:message
 									code="label.other_parametres"/></a></li>
 					</ul>
 				</div>

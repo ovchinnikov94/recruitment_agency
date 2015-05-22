@@ -80,7 +80,7 @@ public class PeopleController {
 	}
 	
 	@RequestMapping(value = "saveUpdateMan{id}.do", method = RequestMethod.POST)
-	public String save(@ModelAttribute("man") People people, @PathVariable int id, BindingResult result){
+	public String save(@ModelAttribute("man") People people, BindingResult result, @PathVariable int id){
 		if (result.hasErrors()) {
 			return "errorPage";
 		}

@@ -21,7 +21,6 @@ public class HistoryDaoImpl implements HistoryDao {
 		session = HibernateUtil.getSession().openSession();
 		session.beginTransaction();
 		session.save(history);
-		history = (History)session.merge(history);
 		session.getTransaction().commit();
 		session.close();
 	}
@@ -55,37 +54,43 @@ public class HistoryDaoImpl implements HistoryDao {
 		return history;
 	}
 
-	public List<History> getHistoryByPeople(People people){
+	@SuppressWarnings("unchecked")
+	public List<History> getHistoryByPeople(int idpeople){
 		List<History> history = new ArrayList<History>();
 		Session session = null;
 		session = HibernateUtil.getSession().openSession();
 		session.beginTransaction();
 		Criteria cr = session.createCriteria(History.class);
-		cr.add(Restrictions.sqlRestriction("idpeople = "+people.getIdpeople())); //eq("idpeople", people.getIdpeople()));
-		for (Object o : cr.list()) history.add((History)o);
+		People people = new People();
+		people.setIdpeople(idpeople);
+		cr.add(Restrictions.eq("people", people));
+		history = cr.list();
 		session.getTransaction().commit();
 		session.close();
 		return history;
 	}
 	
+	@SuppressWarnings("unchecked")
 	public List<History> getAllHistory() {
 		List<History> history = new ArrayList<History>();
 		Session session = null;
 		session = HibernateUtil.getSession().openSession();
 		session.beginTransaction();
 		Criteria cr = session.createCriteria(History.class);
-		for (Object o : cr.list()) history.add((History)o);
+		history = cr.list();
 		session.getTransaction().commit();
 		session.close();
 		return history;
 	}
 
 	@SuppressWarnings("unchecked")
-	public List<History> getHistoryByCompany(Company company) {
+	public List<History> getHistoryByCompany(int idcompany) {
 		List<History> history = new ArrayList<History>();
 		Session session = null;
 		session = HibernateUtil.getSession().openSession();
 		session.beginTransaction();
+		Company company = new Company();
+		company.setIdcompany(idcompany);
 		Criteria cr = session.createCriteria(History.class);
 		cr.add(Restrictions.eq("company = ",company)); 			
 		history = cr.list();

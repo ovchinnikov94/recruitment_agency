@@ -52,6 +52,16 @@
 			</a>
 		</td>
 		<td>
+			<a href="deleteMan${man.idpeople}.do">
+				<button type="button" class="btn btn-lg btn-danger"><spring:message code="label.delete" /></button>
+			</a>
+		</td>
+		<td>
+			<a href="showHist${man.idpeople}.do">
+				<button type="button" class="btn btn-lg btn-info"><spring:message code="label.show_hist" /></button>
+			</a>
+		</td>
+		<td>
 			<a href="vacanciesByPeople${man.idpeople}.do">
 				<button type="button" class="btn btn-lg btn-primary"><spring:message code="label.find_vacancy" /></button>
 			</a>
