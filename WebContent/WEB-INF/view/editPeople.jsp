@@ -7,35 +7,63 @@
 <h1>${man.name} ${man.surname}</h1>
 </div>
 <div class="row">
-<form:form method="post" commandName="man" action="${action}">
+<form:form method="post" commandName="man" action="${action}" data-toggle="validator">
     <table class="table table-striped">
     <tr>
         <td><form:label path="name"><spring:message code="label.firstname"/>*</form:label></td>
-        <td><form:input path="name" /></td>
+        <td>
+        	<div class="col-xs-5">
+        	<input type="text" value="${man.name}" pattern="^[а-яА-ЯёЁa-zA-Z]+$" name="name" class="form-control" required/>
+        	</div>
+        </td>
     </tr>
     <tr>
         <td><form:label path="surname"><spring:message code="label.surname"/>*</form:label></td>
-        <td><form:input path="surname" /></td>
+        <td>
+        	<div class="col-xs-5">
+        	<input type="text" value="${man.surname}" pattern="^[а-яА-ЯёЁa-zA-Z]+$"  name="surname" class="form-control" required/>
+        	</div>
+        </td>
     </tr>
     <tr>
         <td><form:label path="middlename"><spring:message code="label.middlename"/></form:label></td>
-        <td><form:input path="middlename" /></td>
+        <td>
+        	<div class="col-xs-5">
+        	<input type="text" value="${man.middlename}" pattern="^[а-яА-ЯёЁa-zA-Z]+$" name="middlename" class="form-control"/>
+			</div>        	
+        </td>
     </tr>
     <tr>
         <td><form:label path="age"><spring:message code="label.age"/>*</form:label></td>
-        <td><form:input path="age" /></td>
+        <td>
+        	<div class="col-xs-4">
+        	<input type="number" class="form-control" value="${man.age}" name="age" required/>
+        	</div>
+        </td>
     </tr>
     <tr>
         <td><form:label path="salary"><spring:message code="label.salary"/>*</form:label></td>
-        <td><form:input path="salary" /></td>
+        <td>
+        	<div class="col-xs-4">
+        	<input type="number" name="salary" class="form-control" value="${man.salary}" required/>
+        	</div>
+        </td>
     </tr>
     <tr>
         <td><form:label path="contacts"><spring:message code="label.contacts"/></form:label></td>
-        <td><form:input path="contacts" /></td>
+        <td>
+        	<div class="col-xs-6">
+        	<input name="contacts" value="${man.contacts}" type="text" class="form-control" />
+        	</div>
+        </td>
     </tr>
     <tr>
         <td><form:label path="studyplace"><spring:message code="label.studyplace"/></form:label></td>
-        <td><form:input path="studyplace" /></td>
+        <td>
+        	<div class="col-xs-5">
+        	<input name="studyplace" value="${man.studyplace}" type="text" class="form-control" />
+        	</div>
+        </td>
     </tr>
     <tr>
         <td><form:label path="post.idpost"><spring:message code="label.post"/>*</form:label></td>
@@ -91,7 +119,7 @@
     </tr>
     <tr>
         <td colspan="2">
-            <input type="submit" value="<spring:message code="label.save"/>"/>
+            <input type="submit" class="btn btn-primary" value="<spring:message code="label.save"/>"/>
         </td>
     </tr>
 

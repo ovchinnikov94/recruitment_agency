@@ -8,7 +8,7 @@
 <h1>${man.name} ${man.surname}</h1>
 </div>
 <div class="row">
-<table class="table">
+<table class="table table-striped">
 	<tr>
 		<td><spring:message code="label.age"/></td>
 		<td>${man.age}</td>
@@ -45,6 +45,8 @@
 			<td><c:forEach items="${man.skills}" var="l">${l.skillname}<br></c:forEach></td>
 		</tr>
 	</c:if>
+</table>
+	<table class="table">
 	<tr>
 		<td>
 			<a href="editPeople${man.idpeople}.do">
@@ -67,5 +69,5 @@
 			</a>
 		</td>
 	</tr>
-</table>
+	</table>
 </div>

@@ -53,20 +53,34 @@
 </div>
 
 <div class="row">
-	<form:form path="hist" commandName="hist" action="addHist${idpeople}.do">
+	<form:form path="hist" commandName="hist" action="addHist${idpeople}.do" data-toggle="validator">
 	<table class="table">
 		<tr>
-			<td><spring:message code="label.begin"/></td>
+			<td><spring:message code="label.begin"/>(dd/mm/yyyy)</td>
 			
-			<td><input type="text" id="dateFrom" name="dateFrom"/></td>
+			<td>
+				<div class="col-xs-5">
+				<input type="text" pattern="(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d" 
+					class="form-control" name="dateFrom" required/>
+				</div>
+			</td>
 		</tr>
 		<tr>
-			<td><spring:message code="label.end"/></td>
-			<td><input type="text" id="dateTo" name="dateTo"/></td>
+			<td><spring:message code="label.end"/>(dd/mm/yyyy)</td>
+			<td>
+				<div class="col-xs-5">
+				<input type="text" pattern="(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d" 
+					class="form-control" name="dateTo" required/>
+				</div>
+			</td>
 		</tr>
 		<tr>
 			<td><spring:message code="label.salary"/></td>
-			<td><form:input path="salary"/></td>
+			<td>
+				<div class="col-xs-3">
+				<input type="number" class="form-control" value="${hist.salary}" name="salary" required/>
+				</div>
+			</td>
 		</tr>
 		<tr>
 			<td><spring:message code="label.post"/></td>
@@ -78,7 +92,7 @@
 		</tr>
 		<tr>
 			<spring:message code="label.add" var="k"/>
-			<td><input type="submit" value="${k}" /></td>
+			<td><input type="submit" class="btn btn-primary" value="${k}" /></td>
 		</tr>
 	</table>
 	</form:form>

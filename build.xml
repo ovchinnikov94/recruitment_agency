@@ -10,7 +10,11 @@
 		</fileset>
 	</path>
 
-	<target name="init">
+	<target name="setupDB">
+			<ant antfile="SQLqueries/build.xml"/>
+	</target>
+	
+	<target name="init" depends="setupDB">
 		<mkdir dir="build/classes" />
 		<mkdir dir="dist" />
 	</target>

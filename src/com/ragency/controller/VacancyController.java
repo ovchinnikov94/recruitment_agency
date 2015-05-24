@@ -113,7 +113,7 @@ public class VacancyController {
 	}
 	
 	@RequestMapping(value = "saveUpdateVacancy{id}.do", method = RequestMethod.POST)
-	public String saveUpdateVacancy(@ModelAttribute(value = "vacancy") Vacancy vacancy, @PathVariable int id, BindingResult result){
+	public String saveUpdateVacancy(@ModelAttribute(value = "vacancy") Vacancy vacancy, BindingResult result, @PathVariable int id){
 		vacancy.setIdvacancy(id);
 		this.vacancyManager.updateVacancy(vacancy);
 		return "redirect: showVacancy"+vacancy.getIdvacancy()+".do";

@@ -1,6 +1,10 @@
 package com.ragency.controller;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
@@ -56,6 +60,7 @@ public class MainController {
 	public void initBinder(WebDataBinder binder){
 		binder.registerCustomEditor(Lang.class, new LangEditor(langManager));
 		binder.registerCustomEditor(Skill.class, new SkillEditor(skillManager));
+		binder.registerCustomEditor(Date.class, new CustomDateEditor(new SimpleDateFormat("dd/mm/yyyy"), false));
 	}
 	
 	@RequestMapping(value="search.do", method = RequestMethod.GET)

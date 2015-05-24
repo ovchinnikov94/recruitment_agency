@@ -47,15 +47,23 @@
 	<table class="table">
 		<tr>
 			<td><spring:message code="label.company_name"/></td>
-			<td><form:input path="name"/></td>
+			<td>
+				<div class="col-xs-6">
+				<input type="text" class="form-control" name="name" required/>
+				</div>
+			</td>
 		</tr>
 		<tr>
 			<td><spring:message code="label.contacts"/></td>
-			<td><form:input path="contacts"/></td>
+			<td>
+				<div class="col-xs-6">
+				<input type="text" class="form-control" name="contacts"/>
+				</div>
+			</td>
 		</tr>
 		<tr>
 			<td>
-			<input type="submit" value="<spring:message code="label.add"/>" />
+			<input type="submit" class="btn btn-primary" value="<spring:message code="label.add"/>" />
 			</td>
 		</tr>
 	</table>

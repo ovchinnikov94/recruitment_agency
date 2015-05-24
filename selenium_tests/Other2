@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://localhost:8080/" />
+<title>Other2</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">Other2</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/ragency/other.do</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Другие параметры</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=postname</td>
+	<td>Секретарь</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='Добавить']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Резюме</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//button[@type='button'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td></td>
+	<td>Секретарь</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Другие параметры</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=spherename</td>
+	<td>Строительство</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//input[@value='Добавить'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Резюме</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//button[@type='button'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=sphere.idsphere</td>
+	<td>Строительство</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Другие параметры</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=typename</td>
+	<td>Бакалавр</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//input[@value='Добавить'])[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Резюме</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//button[@type='button'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=type.idtype</td>
+	<td>Бакалавр</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Другие параметры</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=langname</td>
+	<td>Русский</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//input[@value='Добавить'])[5]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Резюме</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//button[@type='button'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=div &gt; label</td>
+	<td>Русский</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Другие параметры</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=skillname</td>
+	<td>Ответственность</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//input[@value='Добавить'])[6]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Резюме</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//button[@type='button'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>//form[@id='man']/table/tbody/tr[13]/td[2]/fieldset/div/label</td>
+	<td>Ответственность</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Другие параметры</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=specname</td>
+	<td>ЖД</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//input[@value='Добавить'])[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Резюме</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//button[@type='button'])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>id=spec.idspec</td>
+	<td>ЖД</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

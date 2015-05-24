@@ -128,10 +128,12 @@ CREATE TABLE IF NOT EXISTS `ragency`.`history` (
   INDEX `fk_history_people1_idx` (`idpeople` ASC),
   CONSTRAINT `fk_history_company1`
     FOREIGN KEY (`idcompany`)
-    REFERENCES `ragency`.`company` (`idcompany`),
+    REFERENCES `ragency`.`company` (`idcompany`)
+    ON DELETE CASCADE,
   CONSTRAINT `fk_history_people1`
     FOREIGN KEY (`idpeople`)
-    REFERENCES `ragency`.`people` (`idpeople`),
+    REFERENCES `ragency`.`people` (`idpeople`)
+    ON DELETE CASCADE,
   CONSTRAINT `fk_history_post1`
     FOREIGN KEY (`idpost`)
     REFERENCES `ragency`.`post` (`idpost`))

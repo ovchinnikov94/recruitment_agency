@@ -49,10 +49,17 @@
 		<td><c:forEach items="${vacancy.langs}" var="l">${l.langname}<br></c:forEach></td>
 	</tr>
 	</c:if>
+</table>
+<table class="table">
 	<tr>
 		<td>
 			<a href="editVacancy${vacancy.idvacancy}.do">
 				<button type="button" class="btn btn-lg btn-primary"><spring:message code="label.edit"/></button>
+			</a>
+		</td>
+		<td>
+			<a href="deleteVacancy${vacancy.idvacancy}.do">
+				<button type="button" class="btn btn-lg btn-danger"><spring:message code="label.delete"/></button>
 			</a>
 		</td>
 		<td>
@@ -61,5 +68,5 @@
 			</a>
 		</td>
 	</tr>
-</table>
+</table>	
 </div>

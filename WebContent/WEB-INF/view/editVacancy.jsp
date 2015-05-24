@@ -19,11 +19,15 @@
 </h1>
 </div>
 <div class="row">
-	<form:form commandName="vacancy" method="post" action="${action}">
+	<form:form commandName="vacancy" method="post" action="${action}" data-toggle="validator">
 		<table class="table table-striped">
 		<tr>
 			<td><form:label path="salary"><spring:message code="label.salary"/></form:label></td>
-			<td><form:input path="salary"/></td>
+			<td>
+				<div class="col-xs-5">
+				<input type="number" name="salary" class="form-control" value="${vacancy.salary}" required/>
+				</div>
+			</td>
 		</tr>
 		<tr>
 			<td><form:label path="company"><spring:message code="label.company"/></form:label></td>
@@ -49,7 +53,7 @@
 			<td><form:label path="langs"><spring:message code="label.langs"/>:</form:label></td>
 			<td>
 				<fieldset>
-				<form:checkboxes path="langs" items="${langList}" itemValue="idlang" itemLabel="langname" element="div" />
+				<form:checkboxes items="${langList}" path="langs"  itemValue="idlang" itemLabel="langname" element="div" />
 				</fieldset>
 			</td>
 		</tr>
@@ -57,12 +61,12 @@
 			<td><form:label path="skills"><spring:message code="label.skills"/>:</form:label></td>
 			<td>
 				<fieldset>
-				<form:checkboxes path="skills" items="${skillList}" itemValue="idskill" itemLabel="skillname" element="div" />
+				<form:checkboxes items="${skillList}" path="skills"  itemValue="idskill" itemLabel="skillname" element="div" />
 				</fieldset>
 			</td>
 		</tr>
 		<tr>
-		<td><input type="submit" value="<spring:message code="label.save"/>" /></td>
+		<td><input type="submit" class="btn btn-primary" value="<spring:message code="label.save"/>" /></td>
 		</tr>
 		</table>
 	</form:form>

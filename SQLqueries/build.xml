@@ -7,8 +7,8 @@
 				url="jdbc:mysql://localhost:3306/ragency" 
 				userid="root" password="root1" onerror="continue">
 			<classpath>
-				<fileset dir="../">
-					<include name="mysql-connector-java-5.1.34-bin.jar" />
+				<fileset dir="./">
+					<include name="mysql*.jar" />
 				</fileset>
 			</classpath>
 			<transaction src="drop_tables.sql" />

@@ -8,28 +8,31 @@
 <h1><spring:message code="label.search"/></h1>
 </div>
 <div class="row">
-<form:form action="implSearch.do" method="post" commandName="searchQueryForm" >	
-	<table class="table">
-		<tr>
-			<td><form:input size="40" path="searchQuery"/></td>
-			<td><input type="submit"  value="<spring:message code="label.search"/>"/></td>
-		</tr>
-		<tr>
-			<td>
-				<spring:message code="label.vacancies" var="vlabel"/>
-				<spring:message code="label.people" var="plabel" />
-				<form:radiobutton path="place" value="vacancy" checked="checked" label="${vlabel}"/>
-				
-			</td>
-			<td><form:radiobutton path="place" value="people" label="${plabel}"/></td>
-		</tr>
+<form:form action="implSearch.do" method="post" commandName="searchQueryForm" data-toggle="validator">	
+		<div class="form-group col-xs-7">
+			<input type="text" class="form-control" pattern="^[а-яА-ЯёЁa-zA-Z]+$" name="searchQuery"/>
+		</div>
+		<div class="form-group">
+			<spring:message code="label.vacancies" var="vlabel"/>
+			<spring:message code="label.people" var="plabel" />
+			<form:radiobutton path="place" style="padding:5px; margin:10px;" value="vacancy" checked="checked" label="${vlabel}"/>
+			<form:radiobutton path="place" style="padding:5px; margin:10px;" value="people" label="${plabel}"/>
+		</div>
+	<table class="table table-striped">
 		<tr>
 			<td><spring:message code="label.salary"/>:</td>
 			<td>
-				<spring:message code="label.from" />
-				<form:input path="minSal"/> 
-				<spring:message code="label.to"/>
-				<form:input path="maxSal"/>
+				<div class="form-group">
+					<div class="col-xs-2">
+						<span class="input-group-addon"><spring:message code="label.from" /></span>
+						<input type="number" value="0" class="form-control" name="minSal"/> 
+					</div>
+					
+					<div class="col-xs-2">
+						<span class="input-group-addon"><spring:message code="label.to"/></span>
+						<input type="number" value="0"  class="form-control" name="maxSal"/>
+					</div>
+				</div>
 			</td>
 		</tr>
 		<tr>
@@ -63,5 +66,8 @@
 			<td><form:checkboxes items="${skillList}" path="skills" itemValue="idskill" itemLabel="skillname" element="br"/></td>
 		</tr>
 	</table>
+	<div class="form-group">
+		<input type="submit" class="btn btn-lg btn-primary" value="<spring:message code="label.search"/>"/>
+	</div>
 </form:form>
 </div>
